@@ -1,0 +1,8 @@
+<launch>
+	<include file="$(find zed_wrapper)/launch/zed_stereo.launch" />
+	<include file="$(find husky_base)/launch/base.launch">
+		<arg name="port" value="/dev/ttyUSB1" />
+	</include>
+	<include file="xsens_driver.launch" />
+	<include file="$(mavros)/px4.launch" />
+</launch>
